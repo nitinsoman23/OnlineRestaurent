@@ -11,6 +11,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
+import javax.validation.constraints.NotNull;
 
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
@@ -29,11 +30,14 @@ public class CategoryDetails implements Serializable {
 	@Column(name="CATEGORY_ID")
 	private long categoryId;
 	
+	@NotNull
 	@Column(name="CATEGORY_NAME")
 	private String categoryName;
 	
+	@NotNull
 	@Column(name="VEG_OR_NON")
 	private String vegOrNon;
+	
 	
 	@Column(name="CREATION_DATE")
 	@CreationTimestamp
@@ -43,6 +47,7 @@ public class CategoryDetails implements Serializable {
 	@UpdateTimestamp
 	private java.sql.Timestamp updationDate;
 	
+	@NotNull
 	@Column(name="ACCESS")
 	private String access;  //A for Admin and U for User
 	

@@ -36,12 +36,16 @@ public class RunMethod implements CommandLineRunner  {
 	@Override
 	public void run(String... args) throws Exception {
 		
-/*		
+		
 			CategoryDetails cc = new CategoryDetails("Punjabi","Veg",null,null,"A");
+			CategoryDetails cc2 = new CategoryDetails("Punjabi","Non-Veg",null,null,"A");
+			CategoryDetails cc3 = new CategoryDetails("South Indian","Veg",null,null,"A");
 			System.out.println("comes here");
 			categoryRepository.save(cc);
+			categoryRepository.save(cc2);
+			categoryRepository.save(cc3);
 			
-			ProductDetails pp =new ProductDetails("PaneerMasala","Punjabi Cusine",110,null,null,"A");
+			/*		ProductDetails pp =new ProductDetails("PaneerMasala","Punjabi Cusine",110,null,null,"A");
 			pp.setCategorydetails(cc);
 			productRepository.save(pp);
 			
