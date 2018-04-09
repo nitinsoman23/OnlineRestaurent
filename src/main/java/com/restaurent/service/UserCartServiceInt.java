@@ -1,11 +1,11 @@
-package com.restaurent.dao;
+package com.restaurent.service;
 
 import java.util.List;
 
 import com.restaurent.entity.UserCartDetails;
 import com.restaurent.exceptions.ResourceNotFoundException;
 
-public interface UserCartDaoInt {
+public interface UserCartServiceInt {
 
 	public boolean addToCart(UserCartDetails userCartDetails);
 	
