@@ -16,6 +16,8 @@ import javax.validation.constraints.NotNull;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 @Entity
 @Table(name="CATEGORY_DETAILS")
 public class CategoryDetails implements Serializable {
@@ -52,6 +54,7 @@ public class CategoryDetails implements Serializable {
 	private String access;  //A for Admin and U for User
 	
 	@OneToMany(mappedBy = "categorydetails")
+	@JsonIgnoreProperties("categorydetails")
 	private List<ProductDetails> productDetails;
 
 	public CategoryDetails() {}
@@ -136,11 +139,14 @@ public class CategoryDetails implements Serializable {
 	public void setProductDetails(List<ProductDetails> productDetails) {
 		this.productDetails = productDetails;
 	}
-	
-	
-	
 
 
+	@Override
+	public String toString() {
+		return "CategoryDetails [categoryId=" + categoryId + ", categoryName=" + categoryName + ", vegOrNon=" + vegOrNon
+				+ ", creationDate=" + creationDate + ", updationDate=" + updationDate + ", access=" + access
+				+ ", productDetails=" + productDetails + "]";
+	}
 
 
 	}

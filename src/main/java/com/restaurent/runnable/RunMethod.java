@@ -45,7 +45,7 @@ public class RunMethod implements CommandLineRunner  {
 			categoryRepository.save(cc2);
 			categoryRepository.save(cc3);
 			
-			/*		ProductDetails pp =new ProductDetails("PaneerMasala","Punjabi Cusine",110,null,null,"A");
+			ProductDetails pp =new ProductDetails("PaneerMasala","Punjabi Cusine",110,null,null,"A");
 			pp.setCategorydetails(cc);
 			productRepository.save(pp);
 			
@@ -60,8 +60,11 @@ public class RunMethod implements CommandLineRunner  {
 			UserDetails userDetails = new UserDetails("Nitin","Soman","nisoman23@gmail.com","99999","12@123","A",null,null);
 			userRepository.save(userDetails);
 			
+			UserDetails userDetails2 = new UserDetails("Neethu","Soman","nesoman23@gmail.com","992399","782@123","A",null,null);
+			userRepository.save(userDetails2);
 			
-			UserCartDetails userCart = new UserCartDetails(2,(float) 22.0,null,"A");
+			
+			/*UserCartDetails userCart = new UserCartDetails(2,(float) 22.0,null,"A");
 			userCart.setProductDetails(pp);
 			userCart.setCategoryDetails(cc);
 			userCart.setUserDetails(userDetails);

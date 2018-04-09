@@ -38,7 +38,7 @@ public class UserDetails implements Serializable {
 	@Column(name = "EMAIL_ID")
 	private String emailId;
 	
-	@Column(name = "MOBILE_NO")
+	@Column(name = "MOBILE_NO", unique=true)
 	private String mobileNo;
 	
 	@Column(name = "PASSWORD")

@@ -25,9 +25,10 @@ public class UserCartDetails implements Serializable {
 	private static final long serialVersionUID = -2061016090166196600L;
 	
 	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "USER_CART_ID")
 	private long userCartId;
+	
 	
 	@Column(name = "NO_OF_PRODUCT")
 	private long noOfProduct;
@@ -147,8 +148,5 @@ public class UserCartDetails implements Serializable {
 		this.userDetails = userDetails;
 	}
 
-
-	
-	
 
 }

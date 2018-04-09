@@ -11,9 +11,12 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+import javax.validation.constraints.NotNull;
 
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @Entity
 @Table(name="PRODUCT_DETAILS")
@@ -30,12 +33,15 @@ public class ProductDetails implements Serializable {
 	@Column(name="PRODUCT_ID")
 	private long productId;
 	
+	@NotNull
 	@Column(name="PRODUCT_NAME")
 	private String productName;
 	
+	@NotNull
 	@Column(name="PRODUCT_DETAIL")
 	private String productDetail;
 
+	@NotNull
 	@Column(name="PRODUCT_PRICE")
 	private int productPrice;
 	
@@ -47,11 +53,13 @@ public class ProductDetails implements Serializable {
 	@UpdateTimestamp
 	private java.sql.Timestamp updationDate;
 	
+	@NotNull
 	@Column(name="ACCESS")
 	private String access;   //A for Admin and U for User
 	
 	@ManyToOne(optional = false)
 	@JoinColumn(name = "CATEGORY_ID")
+	@JsonIgnoreProperties("productDetails")
 	private CategoryDetails categorydetails;
 	
 	
@@ -130,6 +138,14 @@ public class ProductDetails implements Serializable {
 
 	public void setCategorydetails(CategoryDetails categorydetails) {
 		this.categorydetails = categorydetails;
+	}
+
+	@Override
+	public String toString() {
+		return "ProductDetails [productId=" + productId + ", productName=" + productName + ", productDetail="
+				+ productDetail + ", productPrice=" + productPrice + ", creationDate=" + creationDate
+				+ ", updationDate=" + updationDate + ", access=" + access + ", categorydetails=" + categorydetails
+				+ "]";
 	}
 
 	
