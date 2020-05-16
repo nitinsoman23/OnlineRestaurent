@@ -38,6 +38,7 @@ public class UserCartController {
 					new SuccessResponse(HttpStatus.OK, "User Cart Details removed Successfully"), HttpStatus.OK);
 		}
 		System.out.println("nitin3");
+		System.out.println("nitin6");
 		return new ResponseEntity<Object>(
 				new ErrorResponse(HttpStatus.UNAUTHORIZED, "Error in removing user cart details"),
 				HttpStatus.UNAUTHORIZED);
