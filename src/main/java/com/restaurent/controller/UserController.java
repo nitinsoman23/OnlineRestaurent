@@ -72,7 +72,7 @@ public class UserController {
 	
 	@GetMapping("/api/getUserById/{id}")
 	public UserDetails getUserById(@PathVariable("id") int id) throws ResourceNotFoundException {
-		
+		System.out.println("Nitin current controller");
 		return userSerInt.getUserById(id);
 	}
 	
