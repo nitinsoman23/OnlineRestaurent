@@ -63,7 +63,7 @@ public class UserCartController {
 	
 	
 	public void nitinFeature() {
-		System.out.println("Nitin feature");
+		System.out.println("Nitin feature current");
 	}
 	
 	
