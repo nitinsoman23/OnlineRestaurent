@@ -61,15 +61,10 @@ public class UserCartController {
 		
 	}
 	
-<<<<<<< HEAD
+
 	
 	public void nitinFeature() {
 		System.out.println("Nitin feature");
 	}
-	
-=======
-		System.out.println("Sumit feature");
-	}
->>>>>>> Sumit
 	
 }
