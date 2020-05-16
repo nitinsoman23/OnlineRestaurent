@@ -30,7 +30,7 @@ public class UserCartController {
 	
 	@DeleteMapping("/api/removeUserCartdetails")
 	public ResponseEntity<Object> removeCartDetails(@RequestBody UserCartDetails userCartDetails) throws ResourceNotFoundException{
-		System.out.println("nitin1");
+		System.out.println("nitin2");
 		boolean status = userCartSerInt.removeFromCart(userCartDetails);
 		if(status) {
 			
