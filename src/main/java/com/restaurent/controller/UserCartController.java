@@ -61,6 +61,8 @@ public class UserCartController {
 		
 	}
 	
-	
+	public void sumitFeature() {
+		System.out.println("Sumit feature");
+	}
 	
 }
